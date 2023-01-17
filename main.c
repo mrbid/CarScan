@@ -244,7 +244,8 @@ void window_size_callback(GLFWwindow* window, int width, int height)
     uh2 = 1 / wh2;
 
     mIdent(&projection);
-    mPerspective(&projection, 60.0f, aspect, 0.01f, FAR_DISTANCE); 
+    mPerspective(&projection, 60.0f, aspect, 0.01f, FAR_DISTANCE);
+    glUniformMatrix4fv(projection_id, 1, GL_FALSE, (GLfloat*) &projection.m[0][0]);
 }
 
 //*************************************
