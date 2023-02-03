@@ -231,9 +231,9 @@ void window_size_callback(GLFWwindow* window, int width, int height)
     winh = height;
 
     glViewport(0, 0, winw, winh);
-    aspect = (f32)winw / (f32)winh;
     ww = winw;
     wh = winh;
+    aspect = ww / wh;
     rww = 1/ww;
     rwh = 1/wh;
     ww2 = ww/2;
