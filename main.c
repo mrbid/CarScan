@@ -200,9 +200,9 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
 
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 {
-    if(yoffset == -1)
+    if(yoffset < 0)
         zoom += 0.06f * zoom;
-    else if(yoffset == 1)
+    else if(yoffset > 0)
         zoom -= 0.06f * zoom;
     
     if(zoom > -3.f){zoom = -3.f;}
