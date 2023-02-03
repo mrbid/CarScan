@@ -202,7 +202,7 @@ void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 {
     if(yoffset < 0)
         zoom += 0.06f * zoom;
-    else if(yoffset > 0)
+    else
         zoom -= 0.06f * zoom;
     
     if(zoom > -3.f){zoom = -3.f;}
